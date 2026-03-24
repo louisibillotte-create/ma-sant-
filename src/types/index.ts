@@ -31,6 +31,31 @@ export interface WeekData {
   coachNotes: string;
 }
 
+export type MealType = 'Petit-déjeuner' | 'Déjeuner' | 'Dîner' | 'Collation';
+
+export interface DailyMeal {
+  type: MealType;
+  description: string;
+}
+
+export interface DailyDrinks {
+  water: number;    // glasses
+  coffee: number;
+  tea: number;
+  beer: number;
+  wine: number;
+  spirits: number;
+  other: string;
+}
+
+export interface DailyLog {
+  id: string;   // ISO date "2025-03-24"
+  date: string; // ISO date "2025-03-24"
+  meals: DailyMeal[];
+  drinks: DailyDrinks;
+  notes: string;
+}
+
 export interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
@@ -38,5 +63,6 @@ export interface ChatMessage {
 
 export interface AppData {
   weeks: WeekData[];
+  dailyLogs: DailyLog[];
   chatHistory: ChatMessage[];
 }

@@ -2,7 +2,8 @@ import { NavLink } from 'react-router-dom';
 
 const navItems = [
   { to: '/dashboard', label: 'Tableau de bord', icon: '📊' },
-  { to: '/saisie', label: 'Saisie', icon: '✏️' },
+  { to: '/journal', label: 'Journal du jour', icon: '📝' },
+  { to: '/saisie', label: 'Saisie hebdo', icon: '✏️' },
   { to: '/coach', label: 'Coach IA', icon: '🤖' },
 ];
 
